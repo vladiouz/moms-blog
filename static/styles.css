@@ -1,0 +1,380 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    color: #4C0027;
+    background-color: #FAEEE7;
+}
+
+h5 {
+    text-align: right;
+    margin-right: 5%;
+}
+
+h3 {
+    margin-left: 5%;
+}
+
+label {
+    display: block;
+}
+
+p {
+    display: inline;
+}
+
+
+
+/******Navbar section******/
+
+.navbar-light .navbar-brand {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #4C0027;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #4C0027;
+}
+
+
+/******Title section******/
+
+.title {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: max(50px, 5%);
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.frame {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.presentation {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentation-parent {
+    padding: 7%;
+}
+
+.dropdown-menu {
+    min-width: 0;
+    border: 0;
+}
+
+/******Posts******/
+
+.recent-posts-title{
+    margin: 0 15% 5%;
+}
+
+.post {
+    padding: 4% 5% 2%;
+    border-radius: 30px 10px;
+}
+
+.post-bg {
+    margin: 2% 10% 5%;
+}
+
+.post-content {
+    margin: 50px 10%;
+}
+
+.post-hr {
+    border: 0;
+    width: 60%;
+    margin: 3rem auto 0;
+    color: #4C0027;
+}
+
+.add-comm-div {
+    margin: 5em auto 0;
+}
+
+.add-comm-text {
+    width: 20em;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 0.5em;
+}
+
+.add-comm-btn {
+    display: block;
+    border-radius: 4px;
+}
+
+.cannot-comm-msg {
+    color: #38415D;
+}
+
+.comment-box {
+    margin-top: 3em;
+}
+
+.comment-content {
+    font-size: 1.5em;
+    display: block;
+    margin: 0;
+}
+
+/******Register******/
+
+.form-box > label, input {
+    display: block;
+    margin: 1em auto;
+}
+
+.form-box > label {
+    text-align: center;
+}
+
+input {
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.submit {
+    display: block;
+    margin: 2em auto;
+    background-color: #FAEEE7;
+    border-radius: 10px;
+    padding: 10px 50px;
+}
+
+/******Tests******/
+
+.test {
+    padding: 4% 5% 2%;
+    border-radius: 30px 10px;
+    background-color: #D4AC2B;
+    box-shadow: 5px -10px #694E4E;
+}
+
+.test-bg {
+    margin: 0 10% 50px;
+}
+
+.test-paper {
+    margin: 5% 15% 2%;
+    background-color: #D4AC2B;
+    padding: 5% 7% 2%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 1px #4C0027;
+}
+
+.question {
+    margin-bottom: 6%;
+}
+
+.q-info {
+    text-align: right;
+}
+
+.q-title {
+    font-size: 1.8rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    display: inline;
+    margin: 4% 10px 2% 0;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #FAEEE7;
+}
+
+
+.previous {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.change-q-button {
+    padding: 0.75em 1em;
+    border-radius: 10px;
+    margin: 0 1rem;
+    border-width: 0;
+    box-shadow: 5px -5px #013220;
+}
+
+.change-q-button:hover {
+    background-color: #DBD5C2;
+}
+
+.finish-btn {
+    border-radius: 10px;
+    margin: 2% 30% 7%;
+    width: 40%;
+    border-width: 0;
+    padding: 2% 0;
+}
+
+.finish-btn:hover {
+    background-color: #DBD5C2;
+}
+
+/******My account******/
+
+.shadow-box {
+    border-radius: 10px;
+    margin: 0 10% 7%;
+    padding: 5% 10%;
+    box-shadow: 0 0 20px 1px #4C0027;
+}
+
+.stats {
+    margin: 1em 0;
+}
+
+.stats-title {
+    font-size: 1.4rem;
+    color: #805136;
+}
+
+.stats-content {
+    font-size: 1.2rem;
+    color: #805136;
+}
+
+.log-out {
+    padding: 0.75em 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+    border-width: 0;
+    box-shadow: 5px -5px #013220;
+}
+
+.log-out:hover {
+    background-color: #DBD5C2;
+}
+
+/******Footer section******/
+
+.footer {
+    padding: 4% 15% 1%;
+}
+
+.social {
+    text-align: center;
+    padding: 2% 0 3%;
+}
+
+.copyright {
+    text-align: center;
+    font-size: small;
+}
+
+.social-link {
+    margin: 0 2%;
+}
+
+/******Links******/
+
+a:link {
+    text-decoration: none;
+    color: #4C0027;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4C0027;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/******Scroll bar******/
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #C7BEA2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #013220;
+    border: 0.25rem solid hsl(45, 25%, 71%);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #013f28;
+}
+
+/******Colors******/
+
+.chimie {
+    background-color: #9AE66E;
+    box-shadow: 5px -10px #694E4E;
+
+}
+
+.lingvistica {
+    background-color: #95CD41;
+    box-shadow: 5px -10px #886F6F;
+}
+
+.arte {
+    background-color: #8A8635;
+    box-shadow: 5px -10px #C1A3A3;
+}
+
+.green-bg {
+    background-color: #C7BEA2;
+}
+
+.green {
+    color: #C7BEA2;
+}
+
+/******Others******/
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+}
+
+.flashes {
+    margin: 50px 10% -50px;
+    padding: 0;
+    list-style-type: none;
+    color: #805136;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 2em;
+}

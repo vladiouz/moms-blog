@@ -1,0 +1,21 @@
+# fiecare postare din blog intra la o categorie: chimie, lingvistica, arta
+# teste de chimie, lingvistica, altele
+# conturi: username, email, parola
+# comentarii la postari
+# se pot castiga badges
+# poti lasa intrebari separat care se trimit pe email (sectiune casuta postala)
+# subcategorii pt chimie (#8B9A46), lingvistica (#EBE645), arte (#FFCBCB)
+# culoare bara de navigare #C7BEA2
+
+pagini:
+
+home: linkuri spre postari, teste, contul meu
+postari
+postare
+teste
+test
+contul meu
+login
+register
+edit
+posteaza

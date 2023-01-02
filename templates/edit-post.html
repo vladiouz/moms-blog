@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+
+<body>
+
+{{ ckeditor.load() }}
+
+<h1 class="title">Editeaza postarea</h1>
+
+<form method="post">
+
+<div class="green-bg post post-bg form-box">
+
+    <label>Titlu</label>
+    <input type="text" name="title" value="{{ post.title }}">
+
+    <label>Categorie</label>
+    <input type="text" name="category" value="{{ post.category }}">
+
+    <label>Subtitlu</label>
+    <input type="text" name="subtitle" value="{{ post.subtitle }}">
+
+    <label>Continut</label>
+    <p>inainte de link pui https://drive.google.com/uc?id= </p>
+    {{ ckeditor.create(value=post.content) }}
+
+    <button type="submit" class="submit">Submit</button>
+
+</div>
+
+</form>
+
+
+</body>
+
+
+{% include 'footer.html' %}

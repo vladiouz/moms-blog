@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+
+<body>
+
+{{ ckeditor.load() }}
+
+<h1 class="title">Intrebare noua</h1>
+
+<form method="post">
+
+<div class="green-bg post post-bg form-box">
+
+    <label>Titlul testului</label>
+    <input type="text" name="test-title" placeholder="titlul testului">
+
+    <label>Enuntul intrebarii</label>
+    {{ ckeditor.create(name='text') }}
+
+    <label>Prima varianta</label>
+    {{ ckeditor.create(name='v1') }}
+
+    <label>A doua varianta</label>
+    {{ ckeditor.create(name='v2') }}
+
+    <label>A treia varianta</label>
+    {{ ckeditor.create(name='v3') }}
+
+    <label>A patra varianta</label>
+    {{ ckeditor.create(name='v4') }}
+
+    <label>Numarul variantei corecte</label>
+    <input type="text" name="right_v" placeholder="numarul variantei corecte">
+
+    {{ ckeditor.config(name='text') }}
+    {{ ckeditor.config(name='v1') }}
+    {{ ckeditor.config(name='v2') }}
+    {{ ckeditor.config(name='v3') }}
+    {{ ckeditor.config(name='v4') }}
+
+    <button type="submit" class="submit">Submit</button>
+
+</div>
+
+</form>
+
+
+</body>
+
+
+{% include 'footer.html' %}

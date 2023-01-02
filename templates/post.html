@@ -1,0 +1,70 @@
+{% include 'header.html' %}
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
+<h1 class="title">{{ post.title }}</h1>
+
+<div class="post-content">
+
+    {{ post.content |safe }}
+
+    <hr class="post-hr">
+
+    <div class="add-comm-div">
+
+        {% if current_user.is_authenticated %}
+
+        <form method="post">
+            <textarea name="text" class="add-comm-text"></textarea>
+            <button type="submit" class="add-comm-btn">Adauga un comentariu</button>
+        </form>
+
+        {% else %}
+
+        <p class="cannot-comm-msg">Trebuie sa fii logat pentru a adauga un comentariu!</p>
+        <br>
+        <a href="{{ url_for('register') }}">Creează un cont</a>
+        sau
+        <a href="{{ url_for('login') }}">Autentifică-te</a>
+
+        {% endif %}
+
+    </div>
+
+
+    {% for comment in post.comments[::-1] %}
+
+    <div class="comment-box">
+        <p>{{comment.comment_author.username}} pe {{comment.date}}</p>
+        <p class="comment-content">{{comment.text}}</p>
+    </div>
+
+    {% if current_user.id == 1 %}
+    <a href="{{ url_for('delete_comment', comm_id=comment.id) }}">sterge comentariul</a>
+    {% endif %}
+
+    {% endfor %}
+
+</div>
+
+
+{% if current_user.is_authenticated and current_user.id == 1 %}
+
+<a href="{{url_for('edit_post', post_title=post.title)}}">Editeaza postarea</a>
+
+{% endif %}
+
+</body>
+
+
+{% include 'footer.html' %}

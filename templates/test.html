@@ -1,0 +1,44 @@
+{% include 'header.html' %}
+
+<body>
+
+<h1 class="title">{{ test.title }}</h1>
+
+<form method="post">
+
+
+
+<div class="test-paper">
+    <p class="q-info hidden"><span class="q-number">1</span>/<span class="no-of-q">2</span></p>
+
+    {% for question in test.questions %}
+
+    <div class="question">
+        <h2 class="q-title">{{ question.text|safe }}</h2>
+
+        {% if current_user.id == 1 %}
+        <a href="{{ url_for('edit_q', q_id=question.id) }}">editeaza intrebarea</a>
+        {% endif %}
+
+        <label><input checked type="radio" id="q{{ question.id }}a1" name="q{{ question.id }}" value="1" class="answer">{{ question.v1|safe }}</label>
+        <label><input type="radio" id="q{{ question.id }}a2" name="q{{ question.id }}" value="2" class="answer">{{ question.v2|safe }}</label>
+        <label><input type="radio" id="q{{ question.id }}a3" name="q{{ question.id }}" value="3" class="answer">{{ question.v3|safe }}</label>
+        <label><input type="radio" id="q{{ question.id }}a4" name="q{{ question.id }}" value="4" class="answer">{{ question.v4|safe }}</label>
+    </div>
+
+    {% endfor %}
+
+    <button class="previous green-bg change-q-button hidden">Inapoi</button>
+    <button class="next green-bg change-q-button hidden">Inainte</button>
+
+</div>
+
+<button type="submit" class="finish-btn green-bg">Trimite testul</button>
+
+</form>
+
+</body>
+
+{% include 'footer.html' %}
+
+<!--<script src="{{ url_for('static', filename='test.js') }}"></script>-->

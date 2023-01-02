@@ -1,0 +1,57 @@
+{% include 'header.html' %}
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
+<h1 class="title">Contul meu</h1>
+
+<section class="shadow-box green-bg">
+
+    <h2>Username</h2>
+    <h4>{{ account.username }}</h4>
+    <h2>E-mail</h2>
+    <h4>{{ account.email }}</h4>
+
+    <div class="stats">
+        <h2 class="stats-title">Punctaje la teste</h2>
+        <h4 class="stats-content">numar de teste rezolvate: {{ account.scores | list | length }}</h4>
+        <h4 class="stats-content">puncte obtinute in total: {{ account.scores | sum(attribute='ans_correct') }}</h4>
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="">Log out</a>
+</section>
+
+{% if current_user.id == 1 %}
+
+<a href="{{url_for('make_post')}}">Posteaza</a>
+<a href="{{ url_for('create_test') }}">Test nou</a>
+<a href="{{ url_for('create_question') }}">Intrebare noua</a>
+
+<br>
+<br>
+<p>Intrebari:</p>
+
+    {% for inquiry in inquiries %}
+
+    <br>
+    <p>{{inquiry.text}}</p>
+    <br>
+    <a href="{{ url_for('delete_inquiry', inq_id=inquiry.id) }}">sterge intrebarea</a>
+    <br>
+
+    {% endfor %}
+
+{% endif %}
+
+</body>
+
+{% include 'footer.html' %}

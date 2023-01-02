@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
+<h1 class="title">Intrebari</h1>
+
+<section class="shadow-box green-bg">
+    <h2>Lasa o intrebare</h2>
+    <form method="post">
+
+        <textarea name="text" class="add-comm-text"></textarea>
+        <button type="submit" class="add-comm-btn">Adauga</button>
+    </form>
+</section>
+
+</body>
+
+{% include 'footer.html' %}

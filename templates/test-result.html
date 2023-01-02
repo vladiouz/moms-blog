@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+<body>
+
+<h1 class="title">{{ test.title }}</h1>
+
+<div class="green-bg post post-bg form-box">
+
+<h2>Ai raspuns corect la {{ correct_ans }} din {{ no_of_q }} intrebari!</h2>
+
+<a href="{{ url_for('test', test_title=test.title) }}">Inapoi la test</a>
+<br>
+<a href="{{ url_for('my_acc', account=current_user) }}">Contul meu</a>
+
+</div>
+
+</body>
+
+
+{% include 'footer.html' %}

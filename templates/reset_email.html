@@ -1,0 +1,5 @@
+<h2>Salutare, {{user.username}}!</h2>
+<h3>Ai primit acest e-mail pentru ca ai dorit sa iti schimbi parola.</h3>
+<h3>Poti face aceasta <a style="color: blue; cursor: pointer, default; text-decoration: underline;" href="{{ url_for('change_password', user_id=user.id, token=token, _external=True) }}">aici</a></h3>
+
+

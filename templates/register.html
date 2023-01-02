@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
+<h1 class="title">Creaza un cont</h1>
+
+<form method="post">
+
+
+<div class="green-bg post post-bg form-box">
+
+    <label>Username</label>
+    <input type="text" name="username" placeholder="username">
+
+    <label>E-mail</label>
+    <input type="email" name="email" placeholder="e-mail">
+
+    <label>Parola</label>
+    <input type="password" name="password" placeholder="parola">
+
+    <button type="submit" class="submit">Submit</button>
+
+</div>
+
+</form>
+
+</body>
+
+
+{% include 'footer.html' %}

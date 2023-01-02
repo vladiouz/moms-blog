@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+
+<body>
+
+{{ ckeditor.load() }}
+
+<h1 class="title">Postare noua</h1>
+
+<form method="post">
+
+<div class="green-bg post post-bg form-box">
+
+    <label>Titlu</label>
+    <input type="text" name="title" placeholder="titlu">
+
+    <label>Categorie</label>
+    <input type="text" name="category" placeholder="categorie">
+
+    <label>Subtitlu</label>
+    <input type="text" name="subtitle" placeholder="subtitlu">
+
+    <label>Continut</label>
+    <p>inainte de link pui https://drive.google.com/uc?id= </p>
+    {{ ckeditor.create() }}
+
+    <button type="submit" class="submit">Submit</button>
+
+</div>
+
+</form>
+
+
+</body>
+
+
+{% include 'footer.html' %}

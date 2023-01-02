@@ -1,0 +1,48 @@
+{% include "header.html" %}
+
+<body>
+
+<!--Title section-->
+<section>
+    <h1 class="title">Numele blogului</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="frame">
+                    <img class="pic" src="{{ url_for('static', filename='images/blank-pfp.jpg') }}" alt="pfp">
+                </div>
+             </div>
+            <div class="col-lg-7 presentation-parent frame">
+                <h3 class="presentation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at mattis ante. Proin venenatis at nisl ac porta. Vestibulum tempor laoreet turpis eget tincidunt. Vivamus fermentum sapien et auctor efficitur. Curabitur tincidunt arcu gravida, euismod eros et, accumsan massa. Nullam scelerisque pharetra feugiat. Vivamus ut lobortis lectus. Donec aliquet elementum augue, nec hendrerit massa posuere vitae.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Recent posts section-->
+<section>
+
+    <h1 class="recent-posts-title">Postari recente</h1>
+
+    {% for post in posts %}
+
+    <div class="post-bg">
+        <a href="{{ url_for('post', title = post.title) }}">
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                <h4>{{ post.subtitle }}</h4>
+                <h6>{{ post.date }}</h6>
+                <h5>{{ post.category }}</h5>
+            </div>
+        </a>
+    </div>
+
+    {% endfor %}
+
+</section>
+
+</body>
+
+{% include "footer.html" %}
+
+<script src="{{ url_for('static', filename='posts.js') }}"></script>
